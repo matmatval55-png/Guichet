@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0f12;
+  --color-paper: #fafaf6;
+  --color-card: #ffffff;
+  --color-line: #e4e4dc;
+  --color-muted: #5b5f67;
+  --color-lime: #d4f54a;
+  --color-lime-deep: #b9dc2a;
+  --color-cobalt: #2b45e8;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Montants surlignés : la signature visuelle de Guichet */
+.surligne {
+  background: linear-gradient(transparent 12%, var(--color-lime) 12%, var(--color-lime) 92%, transparent 92%);
+  padding: 0 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cobalt);
+  outline-offset: 2px;
+}
+
+.prose-legal h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 2rem 0 0.5rem;
+}
+.prose-legal p,
+.prose-legal li {
+  color: #2a2d33;
+  line-height: 1.65;
+  margin: 0.5rem 0;
+}
+.prose-legal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-legal a {
+  color: var(--color-cobalt);
+  text-decoration: underline;
+}
+.a-completer {
+  background: #fff3c4;
+  padding: 0 0.2em;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
